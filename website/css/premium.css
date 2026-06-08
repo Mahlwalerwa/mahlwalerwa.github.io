@@ -245,27 +245,6 @@ html::-webkit-scrollbar-thumb {
   position: relative;
   height: 15rem;
   background-image:
-    linear-gradient(135deg, rgba(17, 24, 39, 0.3), rgba(17, 24, 39, 0.35)),
-    var(--card-img, url("../images/logo.jpg"));
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-.card-visual::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.2));
-  pointer-events: none;
-}
-.card-visual {
-  position: relative;
-  height: 15rem;
-  background-image:
     linear-gradient(135deg, rgba(17, 24, 39, 0.55), rgba(17, 24, 39, 0.35)),
     var(--card-img, linear-gradient(135deg, #111827, #1f2937));
   background-size: cover;
@@ -276,3 +255,25 @@ html::-webkit-scrollbar-thumb {
   justify-content: center;
   overflow: hidden;
 }
+
+/* ─── Product card images via data-img attribute ─── */
+.card-visual[data-img="bedroom-white"]   { --card-img: url("https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=75"); }
+.card-visual[data-img="bedroom-hotel"]   { --card-img: url("https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=75"); }
+.card-visual[data-img="bedroom-modern"]  { --card-img: url("https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=800&q=75"); }
+.card-visual[data-img="bedroom-lamp"]    { --card-img: url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=75"); }
+.card-visual[data-img="bedroom-cosy"]    { --card-img: url("https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=75"); }
+.card-visual[data-img="bedroom-teal"]    { --card-img: url("https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=75"); }
+.card-visual[data-img="bedroom-airy"]    { --card-img: url("https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=75"); }
+.card-visual[data-img="bedroom-guest"]   { --card-img: url("https://images.unsplash.com/photo-1598928636135-d146006ff4be?auto=format&fit=crop&w=800&q=75"); }
+.card-visual[data-img="room-sofa"]       { --card-img: url("https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=75"); }
+.card-visual[data-img="bedroom-soft"]    { --card-img: url("https://images.unsplash.com/photo-1588046130717-0eb0c9a3ba15?auto=format&fit=crop&w=800&q=75"); }
+.card-visual[data-img="bedroom-kids"]    { --card-img: url("https://images.unsplash.com/photo-1585412727339-54e4bae3bbf9?auto=format&fit=crop&w=800&q=75"); }
+.card-visual[data-img="bedroom-clean"]   { --card-img: url("https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&q=75"); }
+.card-visual[data-img="bedside-table"]   { --card-img: url("https://images.unsplash.com/photo-1484100356142-db6ab6244067?auto=format&fit=crop&w=800&q=75"); }
+.card-visual[data-img="furniture-open"]  { --card-img: url("https://images.unsplash.com/photo-1493663284031-b7e3aaa4af1b?auto=format&fit=crop&w=800&q=75"); }
+.card-visual[data-img="printer-office"]  { --card-img: url("https://images.unsplash.com/photo-1580894908361-967195033215?auto=format&fit=crop&w=800&q=75"); }
+.card-visual[data-img="printer-multi"]   { --card-img: url("https://images.unsplash.com/photo-1503389152951-9f343605f61e?auto=format&fit=crop&w=800&q=75"); }
+.card-visual[data-img="pc-setup"]        { --card-img: url("https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=800&q=75"); }
+.card-visual[data-img="network-office"]  { --card-img: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=75"); }
+.card-visual[data-img="it-support"]      { --card-img: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=75"); }
+.card-visual[data-img="headboard-feat"]  { --card-img: url("https://images.unsplash.com/photo-1523419400524-d1263c7c3e0d?auto=format&fit=crop&w=800&q=75"); }

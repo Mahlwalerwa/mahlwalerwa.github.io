@@ -1,41 +1,20 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Premium Beds — Mahlwalerwa (PTY) LTD</title>
     <link rel="icon" href="images/logo.png" type="image/png" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      <li>
-        <a
-          href="index.html#services"
-          class="text-white/50 hover:text-accent text-sm transition-colors duration-200 hover:pl-1"
-        >
-          Services
-        </a>
-      </li>;
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              navy: { DEFAULT: "#1B1F5E", light: "#252A72", dark: "#12143F" },
-              royal: { DEFAULT: "#2B4FA3", light: "#3562C0", dark: "#1E3A7A" },
-              accent: { DEFAULT: "#C42127", light: "#E02D33", dark: "#9B1B20" },
-              silver: { DEFAULT: "#C0C0C0", light: "#E8E8E8", dark: "#8A8A8A" },
-            },
-            fontFamily: {
-              display: ["Playfair Display", "serif"],
-              body: ["Inter", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
+    <!-- Resource hints -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="images/logo.png" as="image" />
+
+    <!-- Fonts (trimmed weights) -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
     <link
@@ -46,6 +25,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
+    <!-- Compiled Tailwind + Custom CSS -->
+    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/premium.css" />
   </head>
   <body class="font-body text-gray-800 bg-white overflow-x-hidden">
@@ -102,7 +83,7 @@
             <img
               src="images/logo.png"
               alt="Mahlwalerwa (PTY) LTD"
-              class="h-14 md:h-16 w-auto transition-all duration-300"
+              class="h-12 md:h-14 w-auto transition-all duration-300"
               id="navLogo"
             />
           </a>
@@ -130,27 +111,27 @@
                 >
                   <a
                     href="#king"
-                    class="block px-5 py-2.5 text-sm text-gray-600 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
+                    class="block px-5 py-2.5 text-sm text-gray-800 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
                     >King Size</a
                   >
                   <a
                     href="#queen"
-                    class="block px-5 py-2.5 text-sm text-gray-600 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
+                    class="block px-5 py-2.5 text-sm text-gray-800 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
                     >Queen Size</a
                   >
                   <a
                     href="#quarter"
-                    class="block px-5 py-2.5 text-sm text-gray-600 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
+                    class="block px-5 py-2.5 text-sm text-gray-800 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
                     >Three Quarter</a
                   >
                   <a
                     href="#double"
-                    class="block px-5 py-2.5 text-sm text-gray-600 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
+                    class="block px-5 py-2.5 text-sm text-gray-800 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
                     >Double Size</a
                   >
                   <a
                     href="#single"
-                    class="block px-5 py-2.5 text-sm text-gray-600 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
+                    class="block px-5 py-2.5 text-sm text-gray-800 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
                     >Single Size</a
                   >
                 </div>
@@ -351,7 +332,7 @@
             <h2 class="text-2xl md:text-3xl font-display font-bold text-navy">
               King Size Beds
             </h2>
-            <p class="text-gray-400 text-sm">
+            <p class="text-gray-800 text-sm">
               183cm &times; 200cm — Our most luxurious range
             </p>
           </div>
@@ -364,104 +345,41 @@
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="group" data-aos="fade-up" data-aos-delay="0">
-            <div
-              class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
-            >
-              <div
-                class="card-visual"
-                style="
-                  --card-img: url(&quot;https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80&quot;);
-                "
-              >
-                <span
-                  class="absolute top-3 left-3 bg-navy text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"
-                  >King</span
-                >
+            <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+              <div class="card-visual" data-img="bedroom-white">
+                <span class="absolute top-3 left-3 bg-navy text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">King</span>
               </div>
               <div class="p-6">
-                <h3
-                  class="text-lg font-bold text-navy mb-2 group-hover:text-royal transition-colors"
-                >
-                  King Size Base &amp; Mattress Set
-                </h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-5">
-                  Complete king size bed set with firm orthopaedic mattress for
-                  optimal spinal support and a sturdy base.
-                </p>
-                <a
-                  href="index.html#contact"
-                  class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"
-                >
-                  <i class="fas fa-paper-plane text-xs"></i> Enquire Now
-                </a>
+                <h3 class="text-lg font-bold text-navy mb-2 group-hover:text-royal transition-colors">King Size Base &amp; Mattress Set</h3>
+                <p class="text-gray-800 text-sm leading-relaxed mb-3">Complete king size bed set with firm orthopaedic mattress for optimal spinal support and a sturdy base.</p>
+                <p class="text-xs font-semibold text-royal mb-4">Price on Application</p>
+                <a href="index.html#contact" class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"><i class="fas fa-paper-plane text-xs"></i> Enquire Now</a>
               </div>
             </div>
           </div>
           <div class="group" data-aos="fade-up" data-aos-delay="100">
-            <div
-              class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
-            >
-              <div
-                class="card-visual"
-                style="
-                  --card-img: url(&quot;https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80&quot;);
-                "
-              >
-                <span
-                  class="absolute top-3 left-3 bg-accent text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"
-                  >Popular</span
-                >
+            <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+              <div class="card-visual" data-img="bedroom-hotel">
+                <span class="absolute top-3 left-3 bg-accent text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Popular</span>
               </div>
               <div class="p-6">
-                <h3
-                  class="text-lg font-bold text-navy mb-2 group-hover:text-royal transition-colors"
-                >
-                  King Size Pillow Top
-                </h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-5">
-                  Extra plush pillow-top mattress with a king-size base. Sink
-                  into cloud-like comfort every single night.
-                </p>
-                <a
-                  href="index.html#contact"
-                  class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"
-                >
-                  <i class="fas fa-paper-plane text-xs"></i> Enquire Now
-                </a>
+                <h3 class="text-lg font-bold text-navy mb-2 group-hover:text-royal transition-colors">King Size Pillow Top</h3>
+                <p class="text-gray-800 text-sm leading-relaxed mb-3">Extra plush pillow-top mattress with a king-size base. Sink into cloud-like comfort every single night.</p>
+                <p class="text-xs font-semibold text-royal mb-4">Price on Application</p>
+                <a href="index.html#contact" class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"><i class="fas fa-paper-plane text-xs"></i> Enquire Now</a>
               </div>
             </div>
           </div>
           <div class="group" data-aos="fade-up" data-aos-delay="200">
-            <div
-              class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
-            >
-              <div
-                class="card-visual"
-                style="
-                  --card-img: url(&quot;https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80&quot;);
-                "
-              >
-                <span
-                  class="absolute top-3 left-3 bg-amber-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"
-                  >Premium</span
-                >
+            <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+              <div class="card-visual" data-img="bedroom-modern">
+                <span class="absolute top-3 left-3 bg-amber-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Premium</span>
               </div>
               <div class="p-6">
-                <h3
-                  class="text-lg font-bold text-navy mb-2 group-hover:text-royal transition-colors"
-                >
-                  King Size Memory Foam
-                </h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-5">
-                  Premium memory foam mattress that contours to your body for a
-                  personalised sleep experience.
-                </p>
-                <a
-                  href="index.html#contact"
-                  class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"
-                >
-                  <i class="fas fa-paper-plane text-xs"></i> Enquire Now
-                </a>
+                <h3 class="text-lg font-bold text-navy mb-2 group-hover:text-royal transition-colors">King Size Memory Foam</h3>
+                <p class="text-gray-800 text-sm leading-relaxed mb-3">Premium memory foam mattress that contours to your body for a personalised sleep experience.</p>
+                <p class="text-xs font-semibold text-royal mb-4">Price on Application</p>
+                <a href="index.html#contact" class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"><i class="fas fa-paper-plane text-xs"></i> Enquire Now</a>
               </div>
             </div>
           </div>
@@ -482,7 +400,7 @@
             <h2 class="text-2xl md:text-3xl font-display font-bold text-navy">
               Queen Size Beds
             </h2>
-            <p class="text-gray-400 text-sm">
+            <p class="text-gray-800 text-sm">
               152cm &times; 200cm — Our best-selling range
             </p>
           </div>
@@ -495,100 +413,43 @@
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="group" data-aos="fade-up" data-aos-delay="0">
-            <div
-              class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
-            >
-              <div
-                class="card-visual"
-                style="
-                  --card-img: url(&quot;https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80&quot;);
-                "
-              >
-                <span
-                  class="absolute top-3 left-3 bg-royal text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"
-                  >Queen</span
-                >
+            <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+              <div class="card-visual" data-img="bedroom-lamp">
+                <span class="absolute top-3 left-3 bg-royal text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Queen</span>
               </div>
               <div class="p-6">
-                <h3 class="text-lg font-bold text-navy mb-2">
-                  Queen Size Base &amp; Mattress Set
-                </h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-5">
-                  Complete queen-size bed set with a supportive mattress and
-                  durable base for everyday luxury.
-                </p>
-                <a
-                  href="index.html#contact"
-                  class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"
-                >
-                  <i class="fas fa-paper-plane text-xs"></i> Enquire Now
-                </a>
+                <h3 class="text-lg font-bold text-navy mb-2 group-hover:text-royal transition-colors">Queen Size Base &amp; Mattress Set</h3>
+                <p class="text-gray-800 text-sm leading-relaxed mb-3">Complete queen-size bed set with a supportive mattress and durable base for everyday luxury.</p>
+                <p class="text-xs font-semibold text-royal mb-4">Price on Application</p>
+                <a href="index.html#contact" class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"><i class="fas fa-paper-plane text-xs"></i> Enquire Now</a>
               </div>
             </div>
           </div>
 
           <div class="group" data-aos="fade-up" data-aos-delay="100">
-            <div
-              class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
-            >
-              <div
-                class="card-visual"
-                style="
-                  --card-img: url(&quot;https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80&quot;);
-                "
-              >
-                <span
-                  class="absolute top-3 left-3 bg-accent text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"
-                  >Best Seller</span
-                >
+            <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+              <div class="card-visual" data-img="bedroom-cosy">
+                <span class="absolute top-3 left-3 bg-accent text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Best Seller</span>
               </div>
               <div class="p-6">
-                <h3 class="text-lg font-bold text-navy mb-2">
-                  Queen Size Pillow Top
-                </h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-5">
-                  Extra cushioning with our queen pillow-top mattress. Ideal for
-                  those who love plush comfort.
-                </p>
-                <a
-                  href="index.html#contact"
-                  class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"
-                >
-                  <i class="fas fa-paper-plane text-xs"></i> Enquire Now
-                </a>
+                <h3 class="text-lg font-bold text-navy mb-2 group-hover:text-royal transition-colors">Queen Size Pillow Top</h3>
+                <p class="text-gray-800 text-sm leading-relaxed mb-3">Extra cushioning with our queen pillow-top mattress. Ideal for those who love plush comfort.</p>
+                <p class="text-xs font-semibold text-royal mb-4">Price on Application</p>
+                <a href="index.html#contact" class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"><i class="fas fa-paper-plane text-xs"></i> Enquire Now</a>
               </div>
             </div>
           </div>
 
           <div class="group" data-aos="fade-up" data-aos-delay="200">
-            <div
-              class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
-            >
-              <div
-                class="card-visual"
-                style="
-                  --card-img: url(&quot;https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80&quot;);
-                "
-              >
-                <span
-                  class="absolute top-3 left-3 bg-green-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"
-                  >Zero Motion</span
-                >
+            <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+              <div class="card-visual" data-img="bedroom-teal">
+                <span class="absolute top-3 left-3 bg-green-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Zero Motion</span>
               </div>
               <div class="p-6">
-                <h3 class="text-lg font-bold text-navy mb-2">
-                  Queen Size Pocket Spring
-                </h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-5">
-                  Individual pocket springs for zero motion transfer — sleep
-                  undisturbed alongside your partner.
-                </p>
-                <a
-                  href="index.html#contact"
-                  class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"
-                >
-                  <i class="fas fa-paper-plane text-xs"></i> Enquire Now
-                </a>
+                <h3 class="text-lg font-bold text-navy mb-2 group-hover:text-royal transition-colors">Queen Size Pocket Spring</h3>
+                <p class="text-gray-800 text-sm leading-relaxed mb-3">Individual pocket springs for zero motion transfer — sleep undisturbed alongside your partner.</p>
+                <p class="text-xs font-semibold text-royal mb-4">Price on Application</p>
+                <a href="index.html#contact" class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"><i class="fas fa-paper-plane text-xs"></i> Enquire Now</a>
               </div>
             </div>
           </div>
@@ -609,7 +470,7 @@
             <h2 class="text-2xl md:text-3xl font-display font-bold text-navy">
               Three Quarter Beds
             </h2>
-            <p class="text-gray-400 text-sm">
+            <p class="text-gray-800 text-sm">
               107cm &times; 200cm — Perfect for teens &amp; guest rooms
             </p>
           </div>
@@ -622,66 +483,28 @@
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="group" data-aos="fade-up" data-aos-delay="0">
-            <div
-              class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
-            >
-              <div
-                class="card-visual"
-                style="
-                  --card-img: url(&quot;https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80&quot;);
-                "
-              >
-                <span
-                  class="absolute top-3 left-3 bg-navy text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"
-                  >¾ Size</span
-                >
+            <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+              <div class="card-visual" data-img="bedroom-airy">
+                <span class="absolute top-3 left-3 bg-navy text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">¾ Size</span>
               </div>
               <div class="p-6">
-                <h3 class="text-lg font-bold text-navy mb-2">
-                  Three Quarter Base &amp; Mattress Set
-                </h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-5">
-                  Comfortable three-quarter bed set, perfect for growing teens
-                  or a stylish guest room setup.
-                </p>
-                <a
-                  href="index.html#contact"
-                  class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"
-                >
-                  <i class="fas fa-paper-plane text-xs"></i> Enquire Now
-                </a>
+                <h3 class="text-lg font-bold text-navy mb-2 group-hover:text-royal transition-colors">Three Quarter Base &amp; Mattress Set</h3>
+                <p class="text-gray-800 text-sm leading-relaxed mb-3">Comfortable three-quarter bed set, perfect for growing teens or a stylish guest room setup.</p>
+                <p class="text-xs font-semibold text-royal mb-4">Price on Application</p>
+                <a href="index.html#contact" class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"><i class="fas fa-paper-plane text-xs"></i> Enquire Now</a>
               </div>
             </div>
           </div>
           <div class="group" data-aos="fade-up" data-aos-delay="100">
-            <div
-              class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
-            >
-              <div
-                class="card-visual"
-                style="
-                  --card-img: url(&quot;https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80&quot;);
-                "
-              >
-                <span
-                  class="absolute top-3 left-3 bg-royal text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"
-                  >Ortho</span
-                >
+            <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+              <div class="card-visual" data-img="bedroom-guest">
+                <span class="absolute top-3 left-3 bg-royal text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Ortho</span>
               </div>
               <div class="p-6">
-                <h3 class="text-lg font-bold text-navy mb-2">
-                  Three Quarter Orthopaedic
-                </h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-5">
-                  Firm orthopaedic support in a three-quarter size for healthy
-                  posture and truly restful sleep.
-                </p>
-                <a
-                  href="index.html#contact"
-                  class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"
-                >
-                  <i class="fas fa-paper-plane text-xs"></i> Enquire Now
-                </a>
+                <h3 class="text-lg font-bold text-navy mb-2 group-hover:text-royal transition-colors">Three Quarter Orthopaedic</h3>
+                <p class="text-gray-800 text-sm leading-relaxed mb-3">Firm orthopaedic support in a three-quarter size for healthy posture and truly restful sleep.</p>
+                <p class="text-xs font-semibold text-royal mb-4">Price on Application</p>
+                <a href="index.html#contact" class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"><i class="fas fa-paper-plane text-xs"></i> Enquire Now</a>
               </div>
             </div>
           </div>
@@ -702,7 +525,7 @@
             <h2 class="text-2xl md:text-3xl font-display font-bold text-navy">
               Double Size Beds
             </h2>
-            <p class="text-gray-400 text-sm">
+            <p class="text-gray-800 text-sm">
               137cm &times; 200cm — Spacious comfort for everyone
             </p>
           </div>
@@ -715,66 +538,28 @@
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="group" data-aos="fade-up" data-aos-delay="0">
-            <div
-              class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
-            >
-              <div
-                class="card-visual"
-                style="
-                  --card-img: url(&quot;https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80&quot;);
-                "
-              >
-                <span
-                  class="absolute top-3 left-3 bg-navy text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"
-                  >Double</span
-                >
+            <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+              <div class="card-visual" data-img="room-sofa">
+                <span class="absolute top-3 left-3 bg-navy text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Double</span>
               </div>
               <div class="p-6">
-                <h3 class="text-lg font-bold text-navy mb-2">
-                  Double Base &amp; Mattress Set
-                </h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-5">
-                  Complete double bed set offering great value and exceptional
-                  comfort for any bedroom.
-                </p>
-                <a
-                  href="index.html#contact"
-                  class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"
-                >
-                  <i class="fas fa-paper-plane text-xs"></i> Enquire Now
-                </a>
+                <h3 class="text-lg font-bold text-navy mb-2 group-hover:text-royal transition-colors">Double Base &amp; Mattress Set</h3>
+                <p class="text-gray-800 text-sm leading-relaxed mb-3">Complete double bed set offering great value and exceptional comfort for any bedroom.</p>
+                <p class="text-xs font-semibold text-royal mb-4">Price on Application</p>
+                <a href="index.html#contact" class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"><i class="fas fa-paper-plane text-xs"></i> Enquire Now</a>
               </div>
             </div>
           </div>
           <div class="group" data-aos="fade-up" data-aos-delay="100">
-            <div
-              class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
-            >
-              <div
-                class="card-visual"
-                style="
-                  --card-img: url(&quot;https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80&quot;);
-                "
-              >
-                <span
-                  class="absolute top-3 left-3 bg-accent text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"
-                  >Plush</span
-                >
+            <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+              <div class="card-visual" data-img="bedroom-soft">
+                <span class="absolute top-3 left-3 bg-accent text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Plush</span>
               </div>
               <div class="p-6">
-                <h3 class="text-lg font-bold text-navy mb-2">
-                  Double Pillow Top
-                </h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-5">
-                  Extra-soft pillow-top double mattress for those who prefer a
-                  plush, cloud-like sleeping surface.
-                </p>
-                <a
-                  href="index.html#contact"
-                  class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"
-                >
-                  <i class="fas fa-paper-plane text-xs"></i> Enquire Now
-                </a>
+                <h3 class="text-lg font-bold text-navy mb-2 group-hover:text-royal transition-colors">Double Pillow Top</h3>
+                <p class="text-gray-800 text-sm leading-relaxed mb-3">Extra-soft pillow-top double mattress for those who prefer a plush, cloud-like sleeping surface.</p>
+                <p class="text-xs font-semibold text-royal mb-4">Price on Application</p>
+                <a href="index.html#contact" class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"><i class="fas fa-paper-plane text-xs"></i> Enquire Now</a>
               </div>
             </div>
           </div>
@@ -795,7 +580,7 @@
             <h2 class="text-2xl md:text-3xl font-display font-bold text-navy">
               Single Size Beds
             </h2>
-            <p class="text-gray-400 text-sm">
+            <p class="text-gray-800 text-sm">
               92cm &times; 200cm — Ideal for kids &amp; compact spaces
             </p>
           </div>
@@ -808,66 +593,28 @@
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="group" data-aos="fade-up" data-aos-delay="0">
-            <div
-              class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
-            >
-              <div
-                class="card-visual"
-                style="
-                  --card-img: url(&quot;https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80&quot;);
-                "
-              >
-                <span
-                  class="absolute top-3 left-3 bg-royal text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"
-                  >Single</span
-                >
+            <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+              <div class="card-visual" data-img="bedroom-kids">
+                <span class="absolute top-3 left-3 bg-royal text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Single</span>
               </div>
               <div class="p-6">
-                <h3 class="text-lg font-bold text-navy mb-2">
-                  Single Base &amp; Mattress Set
-                </h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-5">
-                  Affordable single bed with a quality mattress. Perfect for
-                  children's bedrooms, dorms, and guest rooms.
-                </p>
-                <a
-                  href="index.html#contact"
-                  class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"
-                >
-                  <i class="fas fa-paper-plane text-xs"></i> Enquire Now
-                </a>
+                <h3 class="text-lg font-bold text-navy mb-2 group-hover:text-royal transition-colors">Single Base &amp; Mattress Set</h3>
+                <p class="text-gray-800 text-sm leading-relaxed mb-3">Affordable single bed with a quality mattress. Perfect for children's bedrooms, dorms, and guest rooms.</p>
+                <p class="text-xs font-semibold text-royal mb-4">Price on Application</p>
+                <a href="index.html#contact" class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"><i class="fas fa-paper-plane text-xs"></i> Enquire Now</a>
               </div>
             </div>
           </div>
           <div class="group" data-aos="fade-up" data-aos-delay="100">
-            <div
-              class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
-            >
-              <div
-                class="card-visual"
-                style="
-                  --card-img: url(&quot;https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80&quot;);
-                "
-              >
-                <span
-                  class="absolute top-3 left-3 bg-green-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"
-                  >Ortho</span
-                >
+            <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+              <div class="card-visual" data-img="bedroom-clean">
+                <span class="absolute top-3 left-3 bg-green-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Ortho</span>
               </div>
               <div class="p-6">
-                <h3 class="text-lg font-bold text-navy mb-2">
-                  Single Orthopaedic
-                </h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-5">
-                  Firm single bed for growing children who need proper back
-                  support during sleep. Built to last.
-                </p>
-                <a
-                  href="index.html#contact"
-                  class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"
-                >
-                  <i class="fas fa-paper-plane text-xs"></i> Enquire Now
-                </a>
+                <h3 class="text-lg font-bold text-navy mb-2 group-hover:text-royal transition-colors">Single Orthopaedic</h3>
+                <p class="text-gray-800 text-sm leading-relaxed mb-3">Firm single bed for growing children who need proper back support during sleep. Built to last.</p>
+                <p class="text-xs font-semibold text-royal mb-4">Price on Application</p>
+                <a href="index.html#contact" class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"><i class="fas fa-paper-plane text-xs"></i> Enquire Now</a>
               </div>
             </div>
           </div>
@@ -917,7 +664,7 @@
             <img
               src="images/logo.png"
               alt="Mahlwalerwa Logo"
-              class="h-16 mb-5 rounded-lg"
+              class="h-16 mb-5 rounded-lg" loading="lazy"
             />
             <p class="text-white/50 text-sm leading-relaxed mb-6">
               Quality furniture, beds, and technology solutions for discerning
@@ -1057,7 +804,7 @@
       href="https://wa.me/27787174356"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Chat on WhatsApp"
+      aria-label="Chat on WhatsApp" title="Chat on WhatsApp"
       class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white text-2xl shadow-lg shadow-green-500/30 hover:scale-110 transition-all duration-300 whatsapp-pulse"
     >
       <i class="fab fa-whatsapp"></i>

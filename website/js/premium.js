@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             easing: 'ease-out-cubic',
             once: true,
             offset: 80,
-            disable: window.innerWidth < 768 ? 'phone' : false
+            disable: window.innerWidth < 768
         });
     }
 
@@ -44,15 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // ─── Sticky Nav Shadow ───
     const navbar = document.getElementById('navbar');
     if (navbar) {
-        let lastScroll = 0;
         window.addEventListener('scroll', () => {
-            const currentScroll = window.scrollY;
-            if (currentScroll > 50) {
+            if (window.scrollY > 50) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
             }
-            lastScroll = currentScroll;
         }, { passive: true });
     }
 
@@ -71,8 +68,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // ─── EmailJS config — fill in your credentials from emailjs.com ───
+    const EMAILJS_PUBLIC_KEY  = 'uruTCcFmpu9auP73Q';   // Account → API Keys
+    const EMAILJS_SERVICE_ID  = 'service_8hnr44c';   // Email Services → Service ID
+    const EMAILJS_TEMPLATE_ID = 'template_nmjg94v';  // Email Templates → Template ID
+
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+    }
+
     // ─── Contact Form ───
     const contactForm = document.getElementById('contactForm');
+    const submitBtn   = document.getElementById('submitBtn');
+    const submitIcon  = document.getElementById('submitIcon');
+    const submitLabel = document.getElementById('submitLabel');
+
     if (contactForm) {
         contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
@@ -80,28 +90,42 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData(this);
             const data = Object.fromEntries(formData.entries());
 
-            // Basic validation
             if (!data.name || !data.email || !data.message) {
                 showNotification('Please fill in all required fields.', 'error');
                 return;
             }
 
-            // Email validation
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(data.email)) {
                 showNotification('Please enter a valid email address.', 'error');
                 return;
             }
 
-            // Build mailto or WhatsApp link
-            const subject = encodeURIComponent(`Website Enquiry: ${data.subject || 'General'}`);
-            const body = encodeURIComponent(
-                `Name: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone || 'Not provided'}\n\nMessage:\n${data.message}`
-            );
-            window.location.href = `mailto:info@mahlwalerwa.co.za?subject=${subject}&body=${body}`;
+            // Loading state
+            submitBtn.disabled = true;
+            submitIcon.className = 'fas fa-spinner fa-spin text-xs';
+            submitLabel.textContent = 'Sending…';
 
-            showNotification('Opening your email client...', 'success');
-            this.reset();
+            emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+                from_name: data.name,
+                from_email: data.email,
+                phone:      data.phone || 'Not provided',
+                subject:    data.subject || 'General Enquiry',
+                message:    data.message
+            })
+            .then(() => {
+                showNotification('Message sent! We\'ll be in touch soon.', 'success');
+                contactForm.reset();
+            })
+            .catch((err) => {
+                console.error('EmailJS error:', err);
+                showNotification('Failed to send. Please email us directly at info@mahlwalerwa.co.za', 'error');
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitIcon.className = 'fas fa-paper-plane text-xs';
+                submitLabel.textContent = 'Send Message';
+            });
         });
     }
 

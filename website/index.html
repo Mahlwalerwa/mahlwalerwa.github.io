@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
@@ -8,32 +8,17 @@
     </title>
     <link rel="icon" href="images/logo.png" type="image/png" />
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              navy: { DEFAULT: "#1B1F5E", light: "#252A72", dark: "#12143F" },
-              royal: { DEFAULT: "#2B4FA3", light: "#3562C0", dark: "#1E3A7A" },
-              accent: { DEFAULT: "#C42127", light: "#E02D33", dark: "#9B1B20" },
-              silver: { DEFAULT: "#C0C0C0", light: "#E8E8E8", dark: "#8A8A8A" },
-            },
-            fontFamily: {
-              display: ["Playfair Display", "serif"],
-              body: ["Inter", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
-
-    <!-- Fonts -->
+    <!-- Resource hints -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="images/logo.png" as="image" />
+
+    <!-- Fonts (trimmed weights) -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
 
@@ -49,8 +34,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
 
-    <!-- Custom Premium CSS -->
+    <!-- Compiled Tailwind + Custom CSS -->
+    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/premium.css" />
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   </head>
   <body class="font-body text-gray-800 bg-white overflow-x-hidden">
     <!-- ============ ANNOUNCEMENT BAR ============ -->
@@ -104,7 +93,7 @@
         <div class="flex justify-between items-center h-20">
           <!-- Logo -->
           <a href="index.html" class="flex-shrink-0">
-            <img src="images/logo.png" alt="Mahlwalerwa (PTY) LTD" class="h-14 md:h-16 w-auto transition-all duration-300" id="navLogo" />
+            <img src="images/logo.png" alt="Mahlwalerwa (PTY) LTD" class="h-12 md:h-14 w-auto transition-all duration-300" id="navLogo" />
           </a>
 
           <!-- Desktop Menu -->
@@ -132,27 +121,27 @@
                 >
                   <a
                     href="beds.html#king"
-                    class="block px-5 py-2.5 text-sm text-gray-600 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
+                    class="block px-5 py-2.5 text-sm text-gray-800 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
                     >King Size</a
                   >
                   <a
                     href="beds.html#queen"
-                    class="block px-5 py-2.5 text-sm text-gray-600 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
+                    class="block px-5 py-2.5 text-sm text-gray-800 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
                     >Queen Size</a
                   >
                   <a
                     href="beds.html#quarter"
-                    class="block px-5 py-2.5 text-sm text-gray-600 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
+                    class="block px-5 py-2.5 text-sm text-gray-800 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
                     >Three Quarter</a
                   >
                   <a
                     href="beds.html#double"
-                    class="block px-5 py-2.5 text-sm text-gray-600 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
+                    class="block px-5 py-2.5 text-sm text-gray-800 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
                     >Double Size</a
                   >
                   <a
                     href="beds.html#single"
-                    class="block px-5 py-2.5 text-sm text-gray-600 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
+                    class="block px-5 py-2.5 text-sm text-gray-800 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
                     >Single Size</a
                   >
                 </div>
@@ -361,10 +350,8 @@
               <div
                 class="absolute inset-0 bg-gradient-to-br from-accent/20 to-royal/30 rounded-full blur-3xl scale-110"
               ></div>
-              <div
-                  <div class="relative w-[420px] h-[420px] rounded-full bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center p-12 hero-logo-container">
-                    <img src="images/logo.png" alt="Mahlwalerwa" class="w-full h-full object-contain drop-shadow-2xl rounded-2xl">
-                  </div>
+              <div class="relative w-[420px] h-[420px] rounded-full bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 flex items-center justify-center p-12 hero-logo-container">
+                <img src="images/logo.png" alt="Mahlwalerwa" class="w-full h-full object-contain drop-shadow-2xl rounded-2xl">
               </div>
               <div
                 class="absolute -top-4 right-8 w-4 h-4 bg-accent rounded-full animate-ping"
@@ -429,9 +416,7 @@
             >
               <div
                 class="card-visual"
-                style="
-                  --card-img: url(&quot;https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80&quot;);
-                "
+                data-img="bedroom-white"
               >
                 <div
                   class="absolute top-4 right-4 bg-accent text-white text-xs font-bold px-3 py-1 rounded-full"
@@ -470,111 +455,7 @@
             >
               <div
                 class="card-visual"
-                style="
-                  --card-img: url(&quot;https://images.unsplash.com/photo-1580894908361-967195033215?auto=format&fit=crop&w=1200&q=80&quot;);
-                "
-              >
-                <div
-                  class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full"
-                >
-                  + Setup
-                </div>
-              </div>
-              <div class="p-7">
-                <h3
-                  class="text-xl font-bold text-navy mb-2 group-hover:text-royal transition-colors"
-                >
-                  Printers &amp; IT Solutions
-                </h3>
-                <p class="text-gray-500 text-sm leading-relaxed mb-4">
-                  Quality printers with professional installation, network
-                  connectivity, and full computer configuration included.
-                </p>
-                <div
-                  class="flex items-center text-accent font-semibold text-sm gap-2 group-hover:gap-4 transition-all duration-300"
-                >
-                  View Solutions <i class="fas fa-arrow-right text-xs"></i>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <!-- Furniture -->
-          <a
-            href="furniture.html"
-            class="group"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div
-              class="relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
-            >
-              <div
-                class="card-visual"
-                style="
-                  --card-img: url(&quot;https://images.unsplash.com/photo-1484100356142-db6ab6244067?auto=format&fit=crop&w=1200&q=80&quot;);
-                "
-              >
-                <div
-                  class="absolute top-4 right-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full"
-                >
-                  New
-                </div>
-              </div>
-              <div class="p-7">
-                <h3
-                  class="text-xl font-bold text-navy mb-2 group-hover:text-royal transition-colors"
-                >
-                  Elegant Furniture
-                </h3>
-                <p class="text-gray-500 text-sm leading-relaxed mb-4">
-                  Sophisticated headboards and bedside tables crafted to
-                  transform your bedroom into a sanctuary of style.
-                </p>
-                <div
-                  class="flex items-center text-accent font-semibold text-sm gap-2 group-hover:gap-4 transition-all duration-300"
-                >
-                  Shop Furniture <i class="fas fa-arrow-right text-xs"></i>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ FEATURED PRODUCTS ============ -->
-    <section class="py-24 bg-white">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-16" data-aos="fade-up">
-          <span
-            class="inline-block text-accent font-semibold text-sm tracking-widest uppercase mb-4"
-            >Curated Selection</span
-          >
-          <h2
-            class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-navy mb-4"
-          >
-            Best Sellers
-          </h2>
-          <div
-            class="w-20 h-1 bg-gradient-to-r from-accent to-royal mx-auto rounded-full mb-6"
-          ></div>
-          <p class="text-gray-500 text-lg max-w-2xl mx-auto">
-            Our most popular products, chosen by customers who value quality and
-            sophistication.
-          </p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="group" data-aos="fade-up" data-aos-delay="0">
-            <div
-              class="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
-            >
-              <div
-                class="card-visual"
-                style="
-                  --card-img: url(&quot;https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80&quot;);
-                "
+                data-img="bedroom-white"
               >
                 <span
                   class="absolute top-3 left-3 bg-navy text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"
@@ -591,10 +472,11 @@
                 >
                   King Size Luxury Set
                 </h4>
-                <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                <p class="text-gray-800 text-sm leading-relaxed mb-4">
                   Premium king-size bed with orthopaedic mattress and sturdy
                   base.
                 </p>
+                <p class="text-xs font-semibold text-royal mb-3">Price on Application</p>
                 <a
                   href="beds.html#king"
                   class="inline-flex items-center gap-2 text-accent font-semibold text-sm hover:gap-3 transition-all duration-300"
@@ -611,9 +493,7 @@
             >
               <div
                 class="card-visual"
-                style="
-                  --card-img: url(&quot;https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80&quot;);
-                "
+                data-img="bedroom-lamp"
               >
                 <span
                   class="absolute top-3 left-3 bg-accent text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"
@@ -630,10 +510,11 @@
                 >
                   Queen Size Comfort
                 </h4>
-                <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                <p class="text-gray-800 text-sm leading-relaxed mb-4">
                   Perfect balance of space and comfort for couples and
                   individuals.
                 </p>
+                <p class="text-xs font-semibold text-royal mb-3">Price on Application</p>
                 <a
                   href="beds.html#queen"
                   class="inline-flex items-center gap-2 text-accent font-semibold text-sm hover:gap-3 transition-all duration-300"
@@ -650,9 +531,7 @@
             >
               <div
                 class="card-visual"
-                style="
-                  --card-img: url(&quot;https://images.unsplash.com/photo-1580894908361-967195033215?auto=format&fit=crop&w=1200&q=80&quot;);
-                "
+                data-img="printer-office"
               >
                 <span
                   class="absolute top-3 left-3 bg-green-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"
@@ -669,10 +548,11 @@
                 >
                   Office Printer Package
                 </h4>
-                <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                <p class="text-gray-800 text-sm leading-relaxed mb-4">
                   Complete printer with installation, network setup &amp; PC
                   config.
                 </p>
+                <p class="text-xs font-semibold text-royal mb-3">Price on Application</p>
                 <a
                   href="printers.html"
                   class="inline-flex items-center gap-2 text-accent font-semibold text-sm hover:gap-3 transition-all duration-300"
@@ -689,9 +569,7 @@
             >
               <div
                 class="card-visual"
-                style="
-                  --card-img: url(&quot;https://images.unsplash.com/photo-1523419400524-d1263c7c3e0d?auto=format&fit=crop&w=1200&q=80&quot;);
-                "
+                data-img="headboard-feat"
               >
                 <span
                   class="absolute top-3 left-3 bg-amber-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"
@@ -708,9 +586,10 @@
                 >
                   Velvet Headboard
                 </h4>
-                <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                <p class="text-gray-800 text-sm leading-relaxed mb-4">
                   Elegant upholstered headboard to elevate your bedroom style.
                 </p>
+                <p class="text-xs font-semibold text-royal mb-3">Price on Application</p>
                 <a
                   href="furniture.html#headboards"
                   class="inline-flex items-center gap-2 text-accent font-semibold text-sm hover:gap-3 transition-all duration-300"
@@ -837,7 +716,7 @@
               <div
                 class="aspect-square bg-gradient-to-br from-navy via-royal to-navy-dark flex items-center justify-center p-16"
               >
-                <img src="images/logo.png" alt="Mahlwalerwa (PTY) LTD" class="w-full max-w-xs mx-auto rounded-xl shadow-lg">
+                <img src="images/logo.png" alt="Mahlwalerwa (PTY) LTD" class="w-full max-w-xs mx-auto rounded-xl shadow-lg" loading="lazy">
               </div>
             </div>
             <div
@@ -853,7 +732,7 @@
                 </div>
                 <div>
                   <p class="text-2xl font-bold text-navy">Registered</p>
-                  <p class="text-gray-400 text-sm">PTY LTD Company</p>
+                  <p class="text-gray-800 text-sm">PTY LTD Company</p>
                 </div>
               </div>
             </div>
@@ -894,17 +773,17 @@
                 <p class="text-3xl md:text-4xl font-bold text-navy">
                   500<span class="text-accent">+</span>
                 </p>
-                <p class="text-gray-400 text-sm mt-1">Happy Clients</p>
+                <p class="text-gray-800 text-sm mt-1">Happy Clients</p>
               </div>
               <div class="text-center">
                 <p class="text-3xl md:text-4xl font-bold text-navy">6</p>
-                <p class="text-gray-400 text-sm mt-1">Service Divisions</p>
+                <p class="text-gray-800 text-sm mt-1">Service Divisions</p>
               </div>
               <div class="text-center">
                 <p class="text-3xl md:text-4xl font-bold text-navy">
                   100<span class="text-accent">%</span>
                 </p>
-                <p class="text-gray-400 text-sm mt-1">Satisfaction</p>
+                <p class="text-gray-800 text-sm mt-1">Satisfaction</p>
               </div>
             </div>
           </div>
@@ -1084,7 +963,7 @@
               ><i class="fas fa-star text-amber-400"></i
               ><i class="fas fa-star text-amber-400"></i>
             </div>
-            <p class="text-gray-600 leading-relaxed mb-6 italic">
+            <p class="text-gray-800 leading-relaxed mb-6 italic">
               "The king size bed we purchased is absolutely magnificent. The
               quality exceeded our expectations and the delivery was prompt.
               Highly recommend Mahlwalerwa!"
@@ -1097,7 +976,7 @@
               </div>
               <div>
                 <p class="font-semibold text-navy text-sm">Thabo M.</p>
-                <p class="text-gray-400 text-xs">Johannesburg</p>
+                <p class="text-gray-800 text-xs">Johannesburg</p>
               </div>
             </div>
           </div>
@@ -1114,7 +993,7 @@
               ><i class="fas fa-star text-amber-400"></i
               ><i class="fas fa-star text-amber-400"></i>
             </div>
-            <p class="text-gray-600 leading-relaxed mb-6 italic">
+            <p class="text-gray-800 leading-relaxed mb-6 italic">
               "They installed our office printer and set up the entire network
               flawlessly. Professional service from start to finish. These guys
               know what they're doing."
@@ -1127,7 +1006,7 @@
               </div>
               <div>
                 <p class="font-semibold text-navy text-sm">Lerato N.</p>
-                <p class="text-gray-400 text-xs">Pretoria</p>
+                <p class="text-gray-800 text-xs">Pretoria</p>
               </div>
             </div>
           </div>
@@ -1144,7 +1023,7 @@
               ><i class="fas fa-star text-amber-400"></i
               ><i class="fas fa-star text-amber-400"></i>
             </div>
-            <p class="text-gray-600 leading-relaxed mb-6 italic">
+            <p class="text-gray-800 leading-relaxed mb-6 italic">
               "Beautiful headboard and matching bedside tables transformed our
               bedroom completely. The craftsmanship is top-notch and the price
               was very fair."
@@ -1157,7 +1036,7 @@
               </div>
               <div>
                 <p class="font-semibold text-navy text-sm">Sarah K.</p>
-                <p class="text-gray-400 text-xs">Cape Town</p>
+                <p class="text-gray-800 text-xs">Cape Town</p>
               </div>
             </div>
           </div>
@@ -1338,10 +1217,12 @@
                 ></textarea>
               </div>
               <button
+                id="submitBtn"
                 type="submit"
-                class="w-full sm:w-auto bg-accent hover:bg-accent-dark text-white px-10 py-3.5 rounded-full font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:shadow-accent/30 hover:-translate-y-0.5 flex items-center justify-center gap-2"
+                class="w-full sm:w-auto bg-accent hover:bg-accent-dark text-white px-10 py-3.5 rounded-full font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:shadow-accent/30 hover:-translate-y-0.5 flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                <i class="fas fa-paper-plane text-xs"></i> Send Message
+                <i id="submitIcon" class="fas fa-paper-plane text-xs"></i>
+                <span id="submitLabel">Send Message</span>
               </button>
             </form>
           </div>
@@ -1356,7 +1237,7 @@
           class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10"
         >
           <div>
-                    <img src="images/logo.png" alt="Mahlwalerwa Logo" class="h-16 mb-5 rounded-lg">
+                    <img src="images/logo.png" alt="Mahlwalerwa Logo" class="h-16 mb-5 rounded-lg" loading="lazy">
             <p class="text-white/50 text-sm leading-relaxed mb-6">
               Quality furniture, beds, and technology solutions for discerning
               homes and businesses across South Africa.

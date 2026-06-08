@@ -1,33 +1,20 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Printers &amp; IT Solutions — Mahlwalerwa (PTY) LTD</title>
     <link rel="icon" href="images/logo.png" type="image/png" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              navy: { DEFAULT: "#1B1F5E", light: "#252A72", dark: "#12143F" },
-              royal: { DEFAULT: "#2B4FA3", light: "#3562C0", dark: "#1E3A7A" },
-              accent: { DEFAULT: "#C42127", light: "#E02D33", dark: "#9B1B20" },
-              silver: { DEFAULT: "#C0C0C0", light: "#E8E8E8", dark: "#8A8A8A" },
-            },
-            fontFamily: {
-              display: ["Playfair Display", "serif"],
-              body: ["Inter", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
+    <!-- Resource hints -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="images/logo.png" as="image" />
+
+    <!-- Fonts (trimmed weights) -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
     <link
@@ -38,6 +25,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
+    <!-- Compiled Tailwind + Custom CSS -->
+    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/premium.css" />
   </head>
   <body class="font-body text-gray-800 bg-white overflow-x-hidden">
@@ -94,7 +83,7 @@
             <img
               src="images/logo.png"
               alt="Mahlwalerwa (PTY) LTD"
-              class="h-14 md:h-16 w-auto transition-all duration-300"
+              class="h-12 md:h-14 w-auto transition-all duration-300"
               id="navLogo"
             />
           </a>
@@ -122,27 +111,27 @@
                 >
                   <a
                     href="beds.html#king"
-                    class="block px-5 py-2.5 text-sm text-gray-600 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
+                    class="block px-5 py-2.5 text-sm text-gray-800 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
                     >King Size</a
                   >
                   <a
                     href="beds.html#queen"
-                    class="block px-5 py-2.5 text-sm text-gray-600 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
+                    class="block px-5 py-2.5 text-sm text-gray-800 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
                     >Queen Size</a
                   >
                   <a
                     href="beds.html#quarter"
-                    class="block px-5 py-2.5 text-sm text-gray-600 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
+                    class="block px-5 py-2.5 text-sm text-gray-800 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
                     >Three Quarter</a
                   >
                   <a
                     href="beds.html#double"
-                    class="block px-5 py-2.5 text-sm text-gray-600 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
+                    class="block px-5 py-2.5 text-sm text-gray-800 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
                     >Double Size</a
                   >
                   <a
                     href="beds.html#single"
-                    class="block px-5 py-2.5 text-sm text-gray-600 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
+                    class="block px-5 py-2.5 text-sm text-gray-800 hover:text-navy hover:bg-gray-50 hover:pl-7 transition-all duration-200"
                     >Single Size</a
                   >
                 </div>
@@ -393,7 +382,11 @@
           >
             <i class="fas fa-print text-white"></i>
           </div>
-            <img src="images/logo.png" alt="Mahlwalerwa Logo" class="h-16 w-auto mb-5 rounded-lg" />
+          <div>
+            <h2 class="text-2xl md:text-3xl font-display font-bold text-navy">
+              Printers
+            </h2>
+            <p class="text-gray-800 text-sm">
               Professional-grade printers for every need
             </p>
           </div>
@@ -411,9 +404,7 @@
             >
               <div
                 class="card-visual"
-                style="
-                  --card-img: url(&quot;https://images.unsplash.com/photo-1580894908361-967195033215?auto=format&fit=crop&w=1200&q=80&quot;);
-                "
+                data-img="printer-office"
               >
                 <span
                   class="absolute top-3 left-3 bg-navy text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"
@@ -430,11 +421,11 @@
                 >
                   Colour Inkjet Printer
                 </h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-3">
+                <p class="text-gray-800 text-sm leading-relaxed mb-3">
                   High-quality colour inkjet printer ideal for home offices.
                   Crisp text and vibrant photo printing.
                 </p>
-                <ul class="text-gray-400 text-xs space-y-1 mb-5">
+                <ul class="text-gray-800 text-xs space-y-1 mb-3">
                   <li class="flex items-center gap-2">
                     <i class="fas fa-check text-green-500"></i> Wireless &amp;
                     USB connectivity
@@ -448,6 +439,7 @@
                     included
                   </li>
                 </ul>
+                <p class="text-xs font-semibold text-royal mb-4">Price on Application</p>
                 <a
                   href="index.html#contact"
                   class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"
@@ -464,9 +456,7 @@
             >
               <div
                 class="card-visual"
-                style="
-                  --card-img: url(&quot;https://images.unsplash.com/photo-1580894908361-967195033215?auto=format&fit=crop&w=1200&q=80&quot;);
-                "
+                data-img="printer-office"
               >
                 <span
                   class="absolute top-3 left-3 bg-accent text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"
@@ -483,11 +473,11 @@
                 >
                   Laser Printer
                 </h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-3">
+                <p class="text-gray-800 text-sm leading-relaxed mb-3">
                   Fast, reliable laser printing for high-volume office use.
                   Sharp text on every page.
                 </p>
-                <ul class="text-gray-400 text-xs space-y-1 mb-5">
+                <ul class="text-gray-800 text-xs space-y-1 mb-3">
                   <li class="flex items-center gap-2">
                     <i class="fas fa-check text-green-500"></i> High-speed mono
                     printing
@@ -501,6 +491,7 @@
                     configuration
                   </li>
                 </ul>
+                <p class="text-xs font-semibold text-royal mb-4">Price on Application</p>
                 <a
                   href="index.html#contact"
                   class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"
@@ -517,9 +508,7 @@
             >
               <div
                 class="card-visual"
-                style="
-                  --card-img: url(&quot;https://images.unsplash.com/photo-1503389152951-9f343605f61e?auto=format&fit=crop&w=1200&q=80&quot;);
-                "
+                data-img="printer-multi"
               >
                 <span
                   class="absolute top-3 left-3 bg-amber-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"
@@ -536,11 +525,11 @@
                 >
                   Multifunction Printer
                 </h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-3">
+                <p class="text-gray-800 text-sm leading-relaxed mb-3">
                   Print, scan, copy, and fax in one device. The complete office
                   solution.
                 </p>
-                <ul class="text-gray-400 text-xs space-y-1 mb-5">
+                <ul class="text-gray-800 text-xs space-y-1 mb-3">
                   <li class="flex items-center gap-2">
                     <i class="fas fa-check text-green-500"></i> Print, scan,
                     copy &amp; fax
@@ -554,6 +543,7 @@
                     network setup
                   </li>
                 </ul>
+                <p class="text-xs font-semibold text-royal mb-4">Price on Application</p>
                 <a
                   href="index.html#contact"
                   class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"
@@ -580,7 +570,7 @@
             <h2 class="text-2xl md:text-3xl font-display font-bold text-navy">
               IT Services
             </h2>
-            <p class="text-gray-400 text-sm">
+            <p class="text-gray-800 text-sm">
               Professional technology support &amp; configuration
             </p>
           </div>
@@ -598,9 +588,7 @@
             >
               <div
                 class="card-visual"
-                style="
-                  --card-img: url(&quot;https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1200&q=80&quot;);
-                "
+                data-img="pc-setup"
               >
                 <span
                   class="absolute top-3 left-3 bg-royal text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"
@@ -613,11 +601,12 @@
                 >
                   Computer Setup &amp; Configuration
                 </h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-5">
+                <p class="text-gray-800 text-sm leading-relaxed mb-3">
                   Complete PC and laptop setup including operating system
                   configuration, software installation, and user account
                   creation.
                 </p>
+                <p class="text-xs font-semibold text-royal mb-4">Price on Application</p>
                 <a
                   href="index.html#contact"
                   class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"
@@ -634,9 +623,7 @@
             >
               <div
                 class="card-visual"
-                style="
-                  --card-img: url(&quot;https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80&quot;);
-                "
+                data-img="network-office"
               >
                 <span
                   class="absolute top-3 left-3 bg-accent text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"
@@ -649,10 +636,11 @@
                 >
                   Network &amp; Connectivity
                 </h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-5">
+                <p class="text-gray-800 text-sm leading-relaxed mb-3">
                   Office network setup, Wi-Fi configuration, and shared printer
                   connectivity so your entire team stays connected.
                 </p>
+                <p class="text-xs font-semibold text-royal mb-4">Price on Application</p>
                 <a
                   href="index.html#contact"
                   class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"
@@ -669,9 +657,7 @@
             >
               <div
                 class="card-visual"
-                style="
-                  --card-img: url(&quot;https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80&quot;);
-                "
+                data-img="it-support"
               >
                 <span
                   class="absolute top-3 left-3 bg-green-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider"
@@ -684,10 +670,11 @@
                 >
                   Ongoing IT Support
                 </h3>
-                <p class="text-gray-400 text-sm leading-relaxed mb-5">
+                <p class="text-gray-800 text-sm leading-relaxed mb-3">
                   Troubleshooting, maintenance, and technical support to keep
                   your office technology running smoothly.
                 </p>
+                <p class="text-xs font-semibold text-royal mb-4">Price on Application</p>
                 <a
                   href="index.html#contact"
                   class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"
@@ -844,6 +831,7 @@
               src="images/logo.png"
               alt="Mahlwalerwa Logo"
               class="h-16 w-auto mb-5 rounded-lg"
+              loading="lazy"
             />
             <p class="text-white/50 text-sm leading-relaxed mb-6">
               Quality furniture, beds, and technology solutions for discerning
